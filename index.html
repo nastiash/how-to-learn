@@ -1,3 +1,8 @@
+<!-- Не знаю, можно ли как-то еще общаться с ревьюером, кроме каментов, поэтому пишу здесь xD
+  И если в этом добре исправлять практически нечего, то страшно представить, то еще встречается))
+  Модификаторы _place_* засунула буквально перед отправкой на ревью, до этого все лежало в свойствах блока.
+  И вот почему: ведь если следовать БЭМ, то свойства позиционирования должны быть описаны в модификаторах, вот и наплодила классов.
+  До сих пор не могу окончательно разобраться, когда норма применять позиционирование в свойствах блока, а когда нет =\ -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,8 +25,8 @@
 <!-- DESCRIPTION -->
     <main class="content">
       <section class="description">
-        <div class="two-columns two-columns_place_header">
-          <h3 class="two-columns__brief">Главные проблемы в обучении</h3>
+        <div class="two-columns">
+          <h2 class="two-columns__brief">Главные проблемы в обучении</h2>
           <div class="two-columns__main-text">
             <p class="two-columns__paragraph">Ни в школе, ни в институте нас не учат тому, как правильно изучать материал. Мы готовимся к экзаменам и учим билеты. Мы тренируемся решать однообразные задачи, чтобы лучше сдать тест, но часто в итоге это не дает нам реального знания. Зубрежка быстро выветривается и не приносит пользы.</p>
             <p class="two-columns__paragraph"><span class="two-columns__span-accent">Вывод: </span>учиться тоже нужно уметь, но почему-то этому мало где учат. Что с этим делать?</p>
@@ -31,9 +36,9 @@
       </section>
 <!-- DIGITS -->
       <section class="digits">
-        <h2 class="section-title section-title_place_digits">Цифры и факты</h2>
-        <p class="section-subtitle section-subtitle_place_digits">Про учёбу и мозг</p>
-        <div class="table table_place_digits">
+        <h2 class="section-title">Цифры и факты</h2>
+        <p class="section-subtitle">Про учёбу и мозг</p>
+        <div class="table">
           <div class="table__cell">
             <h3 class="table__heading">86 миллиардов</h3>
             <p class="table__text">Число нейронов в мозге человека</p>
@@ -73,15 +78,15 @@
 <!-- FEYNMAN -->
       <section class="feynman">
         <h2 class="feynman__title">Метод Фейнмана</h2>
-        <h3 class="feynman__subtitle">Выучить и не забыть.</h3>
+        <p class="feynman__subtitle">Выучить и не забыть.</p>
         <a class="feynman__link" href="#">Подробнее &rarr;</a>
       </section>
 <!-- KAUFMAN -->
       <section class="kaufman">
-        <img class="kaufman__triangle" src="./images/kaufman-triangle.svg" alt="синий треугольник">
-        <h2 class="section-title section-title_place_kaufman section-title_theme_dark">Принципы обучения</h2>
-        <p class="section-subtitle section-subtitle_place_kaufman section-subtitle_theme_dark">от Джоша Кауфмана</p>
-        <div class="table table_theme_dark table_place_kaufman">
+        <div class="kaufman__triangle"></div> <!-- изначально было в бэкграунде, так и не смогла вспомнить почему перенесла :( -->
+        <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
+        <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
+        <div class="table table_theme_dark">
           <div class="table__cell table__cell_theme_dark">
             <h3 class="table__heading table__heading_theme_dark">1</h3>
             <p class="table__text table__text_theme_dark">Выберите привлекательный проект.</p>
@@ -126,21 +131,23 @@
       </section>
     </main>
 <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer"> <!-- так и знала, что здесь будет больше всего проблем)) и на этом блоке теперь поняла,зачем мне рекомендовали border-box в чате)) -->
       <div class="footer__columns">
-        <div class="footer__column_content_copyright">
-          <a class="logo logo_place_footer" href="https://praktikum.yandex.ru/"></a>
+        <div class="footer__column footer__column_content_copyright"> <!-- когда исправляла код забыла недоглядела и добавила класс footer__column только в последний элемент(( -->
+          <a class="logo logo_place_footer" href="https://praktikum.yandex.ru/"></a> <!-- на момент верстки футера было сложно с флексами, сейчас справилась меньше, чем за минуту, главное, чтобы правильно xD -->
           <p class="footer__author">© 2020. Анастасия Шуйская</p>
         </div>
-        <nav class="footer__column_content_info">
+        <nav class="footer__column footer__column_content_info">
           <h3 class="footer__column-heading">О Практикуме</h3>
-            <a class="footer__column-links" href="#">Главная</a>
-            <a class="footer__column-links" href="#">Концепция</a>
-            <a class="footer__column-links" href="#">Наставники</a>
+            <ul class="footer__links-list"></ul> <!-- тут было сложнее всего, я в принципе осознавала, что так надо, но вставлять тег без класса совесть не позволила)) -->
+              <a class="footer__column-links" href="#">Главная</a>
+              <a class="footer__column-links" href="#">Концепция</a>
+              <a class="footer__column-links" href="#">Наставники</a>
+            </ul>
         </nav>
         <div class="footer__column footer__column_content_social">
           <h3 class="footer__column-heading">Соцсети</h3>
-            <ul class="footer__column-links">
+            <ul class="footer__links-list"> <!-- а вот тут я вышла из положения и влепила одинаковые классы xD -->
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="логотип Facebook">Facebook</a></li>
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/vk_color_white.svg" alt="логотип VK">ВКонтакте</a></li>
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/instagram_color_white.svg" alt="логотип Instagram">Instagram</a></li>
@@ -151,3 +158,4 @@
   </div>
 </body>
 </html>
+<!-- вообще почему-то была уверена что больше проблем будет с файлом style.css, вывод - не стоит быть уверенной вообще ни в чем xD-->
