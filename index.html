@@ -1,8 +1,3 @@
-<!-- Не знаю, можно ли как-то еще общаться с ревьюером, кроме каментов, поэтому пишу здесь xD
-  И если в этом добре исправлять практически нечего, то страшно представить, то еще встречается))
-  Модификаторы _place_* засунула буквально перед отправкой на ревью, до этого все лежало в свойствах блока.
-  И вот почему: ведь если следовать БЭМ, то свойства позиционирования должны быть описаны в модификаторах, вот и наплодила классов.
-  До сих пор не могу окончательно разобраться, когда норма применять позиционирование в свойствах блока, а когда нет =\ -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -83,7 +78,7 @@
       </section>
 <!-- KAUFMAN -->
       <section class="kaufman">
-        <div class="kaufman__triangle"></div> <!-- изначально было в бэкграунде, так и не смогла вспомнить почему перенесла :( -->
+        <div class="kaufman__triangle"></div>
         <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
         <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
         <div class="table table_theme_dark">
@@ -131,23 +126,23 @@
       </section>
     </main>
 <!-- FOOTER -->
-    <footer class="footer"> <!-- так и знала, что здесь будет больше всего проблем)) и на этом блоке теперь поняла,зачем мне рекомендовали border-box в чате)) -->
+    <footer class="footer">
       <div class="footer__columns">
-        <div class="footer__column footer__column_content_copyright"> <!-- когда исправляла код забыла недоглядела и добавила класс footer__column только в последний элемент(( -->
-          <a class="logo logo_place_footer" href="https://praktikum.yandex.ru/"></a> <!-- на момент верстки футера было сложно с флексами, сейчас справилась меньше, чем за минуту, главное, чтобы правильно xD -->
+        <div class="footer__column footer__column_content_copyright">
+          <a class="logo logo_place_footer" href="https://praktikum.yandex.ru/"></a>
           <p class="footer__author">© 2020. Анастасия Шуйская</p>
         </div>
         <nav class="footer__column footer__column_content_info">
           <h3 class="footer__column-heading">О Практикуме</h3>
-            <ul class="footer__links-list"> <!-- тут было сложнее всего, я в принципе осознавала, что так надо, но вставлять тег без класса совесть не позволила)) -->
-              <a class="footer__column-links" href="#">Главная</a>
-              <a class="footer__column-links" href="#">Концепция</a>
-              <a class="footer__column-links" href="#">Наставники</a>
+            <ul class="footer__links-list">
+              <li><a class="footer__column-links" href="#">Главная</a></li>
+              <li><a class="footer__column-links" href="#">Концепция</a></li>
+              <li><a class="footer__column-links" href="#">Наставники</a></li>
             </ul>
         </nav>
         <div class="footer__column footer__column_content_social">
           <h3 class="footer__column-heading">Соцсети</h3>
-            <ul class="footer__links-list"> <!-- а вот тут я вышла из положения и влепила одинаковые классы xD -->
+            <ul class="footer__links-list">
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="логотип Facebook">Facebook</a></li>
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/vk_color_white.svg" alt="логотип VK">ВКонтакте</a></li>
               <li><a class="footer__column-links" href="#"><img class="footer__social-icon" src="./images/instagram_color_white.svg" alt="логотип Instagram">Instagram</a></li>
