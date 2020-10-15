@@ -1,0 +1,11 @@
+.section-title {
+  margin: 0 auto;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  /* cпозиционированые элементы (и их дети) перекрывают элементы без явно заданного позиционирования */
+}
