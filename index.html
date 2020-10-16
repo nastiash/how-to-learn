@@ -10,7 +10,7 @@
 <body>
   <div class="page">
     <header class="header">
-      <a class="logo logo_place_header" href="https://praktikum.yandex.ru/"></a>
+      <a class="logo logo__place_header" href="https://praktikum.yandex.ru/"></a>
       <h1 class="header__title">Научиться учиться</h1>
       <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?<a class="header__link" href="#"> Узнать &rarr;</a></p>
       <img class="header__main-illustration" src="./images/header-image.png" alt="Федор Решетников - Опять двойка">
@@ -34,28 +34,28 @@
         <p class="section-subtitle">Пять практик от Барбары Оакли</p>
         <ul class="cards">
           <li class="cards__item">
-            <div class="cards__image"></div>
-            <h2 class="cards__title">Два вида внимания</h2>
+            <img class="cards__image" src="/images/cards-attention.png" alt="Внимание">
+            <h3 class="cards__title">Два вида внимания</h3>
             <p class="cards__description">Глубокие знания возникают, если чередовать сфокусированное и рассеянное мышление.</p>
           </li>
           <li class="cards__item">
-            <div class="cards__image"></div>
-            <h2 class="cards__title">Recall</h2>
+            <img class="cards__image" src="/images/cards-recall.png" alt="Recall">
+            <h3 class="cards__title">Recall</h3>
             <p class="cards__description">Вспоминайте изученное — это позволит соединить разрозненные порции памяти.</p>
           </li>
           <li class="cards__item">
-            <div class="cards__image"></div>
-            <h2 class="cards__title">Интерливинг</h2>
+            <img class="cards__image" src="/images/cards-interliving.png" alt="Интерливинг">
+            <h3 class="cards__title">Интерливинг</h3>
             <p class="cards__description">Изучайте несколько навыков одновременно, они обогащают друг друга.</p>
           </li>
           <li class="cards__item">
-            <div class="cards__image"></div>
-            <h2 class="cards__title">Вопросы</h2>
+            <img class="cards__image" src="/images/cards-question.png" alt="Вопросы">
+            <h3 class="cards__title">Вопросы</h3>
             <p class="cards__description">Слушая преподавателя, придумывайте хороший вопрос, который вас действительно волнует.</p>
           </li>
           <li class="cards__item">
-            <div class="cards__image"></div>
-            <h2 class="cards__title">Иллюзия компетентности</h2>
+            <img class="cards__image" src="/images/cards-competence.png" alt="Компетентность">
+            <h3 class="cards__title">Иллюзия компетентности</h3>
             <p class="cards__description">Повторите про себя, запишите, расскажите другу: вам только кажется, что вы владеете новой темой.</p>
           </li>
         </ul>
@@ -64,9 +64,13 @@
       <section class="video">
         <h2 class="section-title">Видео нa TED</h2>
         <p class="section-subtitle">Для тех, кто любит прокрастинировать</p>
-        <div class="iframes">
-          <div class="iframe"></div>
-          <div class="iframe"></div>
+        <div class="video__iframes">
+          <iframe class="video__iframe" id="ytplayer" type="text/html" width="515" height="289.6875"
+src="https://www.youtube.com/embed/arj7oStGLkU?color=white"
+frameborder="0" allowfullscreen></iframe>
+<iframe class="video__iframe" id="ytplayer" type="text/html" width="515" height="289.6875"
+src="https://www.youtube.com/embed/5MgBikgcWnY?color=white"
+frameborder="0" allowfullscreen></iframe>
         </div>
       </section>
 <!-- OAKLEY -->
@@ -130,11 +134,11 @@
         <div class="khan__container">
           <p class="khan__author">Салман Хан</p>
           <h2 class="khan__title">Весь мир — школа</h2>
-          <p class="khan__quote">Страсть и новаторство Сала Хана меняют процесс обучения миллионов студентов по всему миру. Книгу «Весь мир — школа» нужно прочитать всем, кто занимается образованием — так учащиеся повсюду смогут получить навыки и знания, которые приносят успех в школе, карьере и жизни.</p>
-          <p class="khan__quote-author">Джордж Лукас</p>
+          <blockquote class="khan__quote">Страсть и новаторство Сала Хана меняют процесс обучения миллионов студентов по всему миру. Книгу «Весь мир — школа» нужно прочитать всем, кто занимается образованием — так учащиеся повсюду смогут получить навыки и знания, которые приносят успех в школе, карьере и жизни.</blockquote>
+          <cite class="khan__quote-author">Джордж Лукас</cite>
           <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
           <div class="khan__book-container">
-            <img class="khan__book-pic" src="/images/khan-book.jpg" alt="Салман Хан. Весь мир - школа">
+            <img class="khan__book-pic" src="/images/khan-book.jpg" alt="Салман Хан. Весь мир - школа.">
             <a class="khan__buy-link" href="#">Купить книгу &rarr;</a>
           </div>
         </div>
@@ -190,20 +194,21 @@
 <!-- RESOURCES -->
       <section class="resources">
         <h2 class="section-title">Полезные ресурсы</h2>
-        <p class="section__subtitle">Больше материалов о техниках и лайфхаках обучения</p>
-        <div class="logo-zone">
-          <div class="logo"></div>
-          <div class="logo"></div>
-          <div class="logo"></div>
-          <div class="logo"></div>
-        </div>
+        <p class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</p>
+        <ul class="resources__logo-zone">
+<!-- На первом спринте ревьюер сказал, что правильнее добавлять логотипы бэкграундом и добавлять линк -->
+          <li><a class="resources__logo resources__logo_content_arzamas" href="#"></a></li>
+          <li><a class="resources__logo resources__logo_content_n1" href="#"></a></li>
+          <li><a class="resources__logo resources__logo_content_strelka" href="#"></a></li>
+          <li><a class="resources__logo resources__logo_content_polka" href="#"></a></li>
+        </ul>
       </section>
     </main>
 <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__columns">
         <div class="footer__column footer__column_content_copyright">
-          <a class="logo logo_place_footer" href="https://praktikum.yandex.ru/"></a>
+          <a class="logo logo__place_footer" href="https://praktikum.yandex.ru/"></a>
           <p class="footer__author">© 2020. Анастасия Шуйская</p>
         </div>
         <nav class="footer__column footer__column_content_info">
