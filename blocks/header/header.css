@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  overflow: hidden;
   position: relative;
   align-items: center;
   height: 100vh;

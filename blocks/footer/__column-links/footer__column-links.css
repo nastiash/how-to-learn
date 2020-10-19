@@ -4,8 +4,13 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  transition: opacity .5s linear;
 }
 
 .footer__column-links:last-of-type {
   margin-bottom: 16px;
+}
+
+.footer__column-links:hover {
+  opacity: .5;
 }
