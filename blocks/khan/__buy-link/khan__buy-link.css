@@ -4,6 +4,8 @@
   font-size: 30px;
   font-weight: normal;
   color: #2f80ed;
+  -webkit-transition: opacity .5s linear;
+  -o-transition: opacity .5s linear;
   transition: opacity .5s linear;
 }
 

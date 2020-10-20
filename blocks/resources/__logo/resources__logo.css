@@ -5,6 +5,8 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transition: opacity .5s linear;
+  -o-transition: opacity .5s linear;
   transition: opacity .5s linear;
 }
 
